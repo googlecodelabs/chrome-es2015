@@ -30,14 +30,14 @@ html, body {
   padding: 0;
   margin: 0;
 }
-#message-form {
+#add-note-form {
   display: flex;
   flex-direction: column;
 }
-#message-form button {
+#add-note-form button {
   max-width: 300px;
 }
-#message-list {
+#notes-container {
   padding: 0;
   width: 100%;
 }
