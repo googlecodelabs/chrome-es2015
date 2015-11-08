@@ -26,10 +26,10 @@ function StyckyNotes() {
 
   // Saves message on form submit.
   this.messageForm.addEventListener('submit',
-    this.getHandler(this.saveNote, true));
+    this.getHandlerFor(this.saveNote, true));
 
   // Toggle for the button.
-  var buttonTogglingHandler = this.getHandler(this.toggleButton);
+  var buttonTogglingHandler = this.getHandlerFor(this.toggleButton);
   this.messageInput.addEventListener('keyup', buttonTogglingHandler);
   this.messageInput.addEventListener('change', buttonTogglingHandler);
 
@@ -45,7 +45,7 @@ function StyckyNotes() {
 
 // Returns an event handler for the for submission which makes sure the given
 // function is ran into a closure bound to this object.
-StyckyNotes.prototype.getHandler = function(func, preventDefault) {
+StyckyNotes.prototype.getHandlerFor = function(func, preventDefault) {
   return function(e) {
     if (preventDefault) {
       e.preventDefault();
