@@ -16,7 +16,7 @@
 'use strict';
 
 // Initializes the StickyNotes system.
-function StyckyNotes() {
+function StickyNotes() {
   // Shortcuts to DOM Elements.
   this.notesContainer = document.getElementById('notes-container');
   this.addNoteForm = document.getElementById('add-note-form');
@@ -44,7 +44,7 @@ function StyckyNotes() {
 
 // Returns an event handler for the for submission which makes sure the given
 // function is ran into a closure bound to this object.
-StyckyNotes.prototype.getHandlerFor = function(func, preventDefault) {
+StickyNotes.prototype.getHandlerFor = function(func, preventDefault) {
   return function(e) {
     if (preventDefault) {
       e.preventDefault();
@@ -54,7 +54,7 @@ StyckyNotes.prototype.getHandlerFor = function(func, preventDefault) {
 };
 
 // Saves a new sticky note on localStorage.
-StyckyNotes.prototype.saveNote = function() {
+StickyNotes.prototype.saveNote = function() {
   if (this.noteMessageInput.value) {
     var key = Date.now().toString();
     localStorage.setItem(key, this.noteMessageInput.value);
@@ -65,14 +65,14 @@ StyckyNotes.prototype.saveNote = function() {
 };
 
 // Resets the given MaterialTextField.
-StyckyNotes.prototype.resetMaterialTextfield = function(element) {
+StickyNotes.prototype.resetMaterialTextfield = function(element) {
   element.value = '';
   element.parentNode.MaterialTextfield.boundUpdateClassesHandler();
   element.blur();
 };
 
 // Template for sticky notes.
-StyckyNotes.prototype.stickyNotesTemplate =
+StickyNotes.prototype.stickyNotesTemplate =
   '<div class="mdl-card mdl-cell mdl-cell--12-col mdl-card__supporting-text ' +
               'mdl-shadow--2dp mdl-cell--4-col-tablet ' +
               'mdl-cell--4-col-desktop">' +
@@ -83,7 +83,7 @@ StyckyNotes.prototype.stickyNotesTemplate =
   '</div>';
 
 // Creates/updates/deletes a note in the UI.
-StyckyNotes.prototype.displayNote = function(key, message) {
+StickyNotes.prototype.displayNote = function(key, message) {
   var div = document.getElementById(key);
   // If no element with the given key exists we create a new note.
   if (!div) {
@@ -112,7 +112,7 @@ StyckyNotes.prototype.displayNote = function(key, message) {
 
 // Enables or disables the submit button depending on the values of the input
 // field.
-StyckyNotes.prototype.toggleButton = function() {
+StickyNotes.prototype.toggleButton = function() {
   if (this.noteMessageInput.value) {
     this.addNoteSubmitButton.removeAttribute('disabled');
   } else {
@@ -122,5 +122,5 @@ StyckyNotes.prototype.toggleButton = function() {
 
 // Bindings on load.
 window.addEventListener('load', function() {
-  new StyckyNotes();
+  new StickyNotes();
 });
