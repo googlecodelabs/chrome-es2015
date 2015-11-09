@@ -17,6 +17,7 @@
 
 // A Sticky Notes app.
 class StickyNotesApp {
+
   constructor() {
     // Shortcuts to DOM Elements.
     this.notesContainer = document.getElementById('notes-container');
@@ -72,8 +73,7 @@ class StickyNotesApp {
     note.setMessage(message);
   }
 
-  // Enables or disables the submit button depending on the values of the input
-  // field.
+  // Enables or disables the submit button depending on the values of the input field.
   toggleButton() {
     if (this.noteMessageInput.value) {
       this.addNoteButton.removeAttribute('disabled');
@@ -88,6 +88,7 @@ window.addEventListener('load', () => new StickyNotesApp());
 
 // This is a Sticky Note custom element.
 class StickyNote extends HTMLElement {
+
   // Fires when an instance of the element is created.
   createdCallback() {
     this.classList.add(...StickyNote.CLASSES);
@@ -119,8 +120,7 @@ class StickyNote extends HTMLElement {
     this.messageElement.innerHTML = this.messageElement.innerHTML.replace(/\n/g, '<br>');
   }
 
-  // Deletes the note by removing the element from the DOM and the data from
-  // localStorage.
+  // Deletes the note by removing the element from the DOM and the data from localStorage.
   deleteNote() {
     localStorage.removeItem(this.id);
     this.parentNode.removeChild(this);

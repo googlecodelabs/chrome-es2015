@@ -33,6 +33,7 @@ function StickyNotesApp() {
   for (var key in localStorage) {
     this.displayNote(key, localStorage[key]);
   }
+
   // Listen for updates to notes from other windows.
   window.addEventListener('storage', function(e) {
     this.displayNote(e.key, e.newValue);
@@ -73,8 +74,7 @@ StickyNotesApp.prototype.displayNote = function(key, message) {
   note.setMessage(message);
 };
 
-// Enables or disables the submit button depending on the values of the input
-// field.
+// Enables or disables the submit button depending on the values of the input field.
 StickyNotesApp.prototype.toggleButton = function() {
   if (this.noteMessageInput.value) {
     this.addNoteButton.removeAttribute('disabled');
@@ -138,8 +138,7 @@ StickyNote.setMessage = function(message) {
   this.messageElement.innerHTML = this.messageElement.innerHTML.replace(/\n/g, '<br>');
 };
 
-// Deletes the note by removing the element from the DOM and the data from
-// localStorage.
+// Deletes the note by removing the element from the DOM and the data from localStorage.
 StickyNote.deleteNote = function() {
   localStorage.removeItem(this.id);
   this.parentNode.removeChild(this);
