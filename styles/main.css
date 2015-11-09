@@ -30,12 +30,8 @@ html, body {
   padding: 0;
   margin: 0;
 }
-#add-note-form {
-  display: flex;
-  flex-direction: column;
-}
-#add-note-form button {
-  max-width: 300px;
+#save {
+  width: 100%;
 }
 #notes-container {
   padding: 0;
@@ -54,12 +50,23 @@ html, body {
   position: absolute;
   bottom: 0;
   right: 0;
-  color: inherit;
+  color: #CCC;
   font-size: 10px;
   height: 25px;
   line-height: 25px;
 }
-
+.delete:HOVER {
+  color: inherit;
+}
+.date {
+  position: absolute;
+  padding: 5px 15px;
+  bottom: 0;
+  left: 0;
+  font-style: italic;
+  font-size: 12px;
+  color: #CCC;
+}
 .mdl-card__supporting-text {
   background: linear-gradient(white, #f9f9f9);
 }
