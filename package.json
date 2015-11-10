@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "serve": "^1.4.0"
+  },
+  "scripts": {
+    "start": "serve --port 52587"
+  }
+}
