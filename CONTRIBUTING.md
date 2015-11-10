@@ -87,7 +87,7 @@ Please provide any other information below, and attach a screenshot if possible.
 ### Submitting a Pull Request
 Before you submit your pull request consider the following guidelines:
 
-* Search [GitHub](https://github.com/googlecodelab/es2015/pulls) for an open or closed Pull Request
+* Search [GitHub](https://github.com/googlecodelab/chrome-es2015/pulls) for an open or closed Pull Request
   that relates to your submission. You don't want to duplicate effort.
 * Please sign our [Contributor License Agreement (CLA)](#cla) before sending pull
   requests. We cannot accept code without this.
@@ -120,7 +120,7 @@ Before you submit your pull request consider the following guidelines:
     git push origin my-fix-branch
     ```
 
-* In GitHub, send a pull request to `es2015:master`.
+* In GitHub, send a pull request to `chrome-es2015:master`.
 * If we suggest changes then:
   * Make the required updates.
   * Rebase your branch and force push to your GitHub repository (this will update your Pull Request):
@@ -172,7 +172,7 @@ changes to be accepted, the CLA must be signed. It's a quick process, we promise
 
 *This guide was inspired by the [AngularJS contribution guidelines](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md).*
 
-[github]: https://github.com/googlecodelabs/es2015
+[github]: https://github.com/googlecodelabs/chrome-es2015
 [google-cla]: https://cla.developers.google.com
 [js-style-guide]: http://google.github.io/styleguide/javascriptguide.xml
 [py-style-guide]: http://google.github.io/styleguide/pyguide.html
