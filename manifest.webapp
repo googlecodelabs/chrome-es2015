@@ -3,9 +3,6 @@
   "name": "Simple Sticky Notes",
   "launch_path": "/index.html",
   "description": "Simple Sticky Notes app",
-  "icons": {
-    "128": "/images/touch/touch-icon-128x128.png"
-  },
   "developer": {
     "name": "",
     "url": ""
