@@ -18,6 +18,7 @@
 // A Sticky Notes app.
 class StickyNotesApp {
 
+  // Initializes the Sticky Notes app.
   constructor() {
     // Shortcuts to DOM Elements.
     this.notesContainer = document.getElementById('notes-container');
