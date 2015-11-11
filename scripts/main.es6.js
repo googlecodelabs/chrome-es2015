@@ -100,6 +100,7 @@ class StickyNote extends HTMLElement {
     this.deleteButton.addEventListener('click', () => this.deleteNote());
   };
 
+  // Fires when an attribute of the element is added/deleted/modified.
   attributeChangedCallback(attributeName) {
     // We display/update the created date message if the id changes.
     if (attributeName == 'id') {

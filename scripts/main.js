@@ -107,6 +107,7 @@ StickyNote.CLASSES = ['mdl-cell--4-col-desktop', 'mdl-card__supporting-text', 'm
 StickyNote.MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov',
                      'Dec'];
 
+// Fires when an instance of the element is created.
 StickyNote.createdCallback = function() {
   StickyNote.CLASSES.forEach(function(klass) {
     this.classList.add(klass);
@@ -118,6 +119,7 @@ StickyNote.createdCallback = function() {
   this.deleteButton.addEventListener('click', this.deleteNote.bind(this));
 };
 
+// Fires when an attribute of the element is added/deleted/modified.
 StickyNote.attributeChangedCallback = function(attributeName) {
   // We display/update the created date message if the id changes.
   if (attributeName == 'id') {
