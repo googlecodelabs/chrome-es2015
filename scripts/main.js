@@ -135,9 +135,6 @@ StickyNote.attributeChangedCallback = function(attributeName) {
 
 // Sets the message of the note.
 StickyNote.setMessage = function(message) {
-  if (message === undefined) {
-    message = "Nope. Nothing.";
-  }
   this.messageElement.textContent = message;
   // Replace all line breaks by <br>.
   this.messageElement.innerHTML = this.messageElement.innerHTML.replace(/\n/g, '<br>');

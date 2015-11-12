@@ -110,13 +110,17 @@ class StickyNote extends HTMLElement {
       } else {
         date = new Date();
       }
-      let month = StickyNote.MONTHS[date.getMonth()];
-      this.dateElement.textContent = `Created on ${month} ${date.getDate()}`;
+
+      // Format the date
+      let dateFormatterOptions = {day: 'numeric', month: 'short'};
+      let shortDate = new Intl.DateTimeFormat("en-US", dateFormatterOptions).format(date);
+
+      this.dateElement.textContent = `Created on ${shortDate}`;
     }
   }
 
   // Sets the message of the note.
-  setMessage(message = "Nope. Nothing.") {
+  setMessage(message) {
     this.messageElement.textContent = message;
     // Replace all line breaks by <br>.
     this.messageElement.innerHTML = this.messageElement.innerHTML.replace(/\n/g, '<br>');
@@ -139,10 +143,6 @@ StickyNote.TEMPLATE = `
 
 // StickyNote elements top level style classes.
 StickyNote.CLASSES = ['mdl-cell--4-col-desktop', 'mdl-card__supporting-text', 'mdl-cell--12-col',
-  'mdl-shadow--2dp', 'mdl-cell--4-col-tablet', 'mdl-card', 'mdl-cell'];
-
-// List of shortened month names.
-StickyNote.MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov',
-                     'Dec'];
+  'mdl-shadow--2dp', 'mdl-cell--4-col-tablet', 'mdl-card', 'mdl-cell', 'sticky-note'];
 
 document.registerElement('sticky-note', StickyNote);
