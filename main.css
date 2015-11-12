@@ -19,7 +19,7 @@ html, body {
 }
 .mdl-grid {
   max-width: 1024px;
-  margin: auto;
+  margin: 20px auto;
 }
 .material-icons {
   font-size: 36px;
@@ -50,7 +50,7 @@ html, body {
   position: absolute;
   bottom: 0;
   right: 0;
-  color: #CCC;
+  color: #BBB;
   font-size: 10px;
   height: 25px;
   line-height: 25px;
@@ -65,8 +65,15 @@ html, body {
   left: 0;
   font-style: italic;
   font-size: 12px;
-  color: #CCC;
+  color: #BBB;
+}
+#notes-section-title {
+  margin-top: 20px;
 }
 .mdl-card__supporting-text {
   background: linear-gradient(white, #f9f9f9);
+}
+.sticky-note {
+  background: linear-gradient(#FFF93A, #FFFC9E);
+  min-height:250px;
 }

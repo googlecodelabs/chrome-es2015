@@ -88,7 +88,7 @@ window.addEventListener('load', function() {
   new StickyNotesApp();
 });
 
-// A Sticky Note custom element.
+// A Sticky Note custom element that extends HTMLElement.
 var StickyNote = Object.create(HTMLElement.prototype);
 
 // Initial content of the element.
@@ -101,7 +101,7 @@ StickyNote.TEMPLATE =
 
 // StickyNote elements top level style classes.
 StickyNote.CLASSES = ['mdl-cell--4-col-desktop', 'mdl-card__supporting-text', 'mdl-cell--12-col',
-  'mdl-shadow--2dp', 'mdl-cell--4-col-tablet', 'mdl-card', 'mdl-cell'];
+  'mdl-shadow--2dp', 'mdl-cell--4-col-tablet', 'mdl-card', 'mdl-cell', 'sticky-note'];
 
 // List of shortened month names.
 StickyNote.MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov',
