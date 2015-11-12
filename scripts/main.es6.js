@@ -116,7 +116,7 @@ class StickyNote extends HTMLElement {
   }
 
   // Sets the message of the note.
-  setMessage(message) {
+  setMessage(message = "Nope. Nothing.") {
     this.messageElement.textContent = message;
     // Replace all line breaks by <br>.
     this.messageElement.innerHTML = this.messageElement.innerHTML.replace(/\n/g, '<br>');
