@@ -110,8 +110,8 @@ class StickyNote extends HTMLElement {
       } else {
         date = new Date();
       }
-      this.dateElement.textContent = `Created on
-        ${StickyNote.MONTHS[date.getMonth()]} ${date.getDate()}`;
+      let month = StickyNote.MONTHS[date.getMonth()];
+      this.dateElement.textContent = `Created on ${month} ${date.getDate()}`;
     }
   }
 

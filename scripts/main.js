@@ -128,8 +128,8 @@ StickyNote.attributeChangedCallback = function(attributeName) {
     } else {
       var date = new Date();
     }
-    this.dateElement.textContent = 'Created on ' + StickyNote.MONTHS[date.getMonth()] + ' ' +
-      date.getDate();
+    var month = StickyNote.MONTHS[date.getMonth()];
+    this.dateElement.textContent = 'Created on ' + month + ' ' + date.getDate();
   }
 };
 
