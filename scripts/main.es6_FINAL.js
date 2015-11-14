@@ -26,7 +26,7 @@ class StickyNotesApp {
     this.addNoteButton = document.getElementById('save');
     this.notesSectionTitle = document.getElementById('notes-section-title');
 
-    // Saves new note on button submit.
+    // Saves notes on button click.
     this.addNoteButton.addEventListener('click', () => this.saveNote());
 
     // Toggle for the button.
