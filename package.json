@@ -1,4 +1,9 @@
 {
+  "name": "chrome-es2015-codelab",
+  "description": "ES2015 Codelab",
+  "license": "Apache-2.0",
+  "author": "Google",
+  "repository": "googlecodelabs/chrome-es2015",
   "devDependencies": {
     "serve": "^1.4.0"
   },
