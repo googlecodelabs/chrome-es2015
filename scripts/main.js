@@ -146,6 +146,6 @@ StickyNote.deleteNote = function() {
   this.parentNode.removeChild(this);
 };
 
-document.registerElement('sticky-note', {
+customElements.define('sticky-note', {
   prototype: StickyNote
 });
