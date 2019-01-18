@@ -145,4 +145,4 @@ StickyNote.TEMPLATE = `
 StickyNote.CLASSES = ['mdl-cell--4-col-desktop', 'mdl-card__supporting-text', 'mdl-cell--12-col',
   'mdl-shadow--2dp', 'mdl-cell--4-col-tablet', 'mdl-card', 'mdl-cell', 'sticky-note'];
 
-document.registerElement('sticky-note', StickyNote);
+customElements.define('sticky-note', StickyNote);
